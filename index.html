@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML emoji</title>
+</head>
+<body>
+    <h1>Enter your birthdate and get an emoji</h1>
+    <label for="">Month</label>
+    <input type="number" id="month">
+    <label for="">Day</label>
+    <input type="number" id="day">
+    <label for="">Year</label>
+    <input type="number" id="year">
+    <button id="btn">Get an emoji</button>
+    <div style="width: 100px;
+    height: 100px;" id="emoji"></div>
+    <script>
+        const btn = document.querySelector("#btn")
+        const month = document.querySelector("#month")
+        const day = document.querySelector("#day")
+        const year = document.querySelector("#year")
+        const emoji = document.querySelector("#emoji")
+
+        btn.addEventListener('click', () => {
+            num = month.value + day.value + year.value
+            emoji.innerHTML = "&#" + num + ";" 
+        })
+    </script>
+</body>
+</html>
